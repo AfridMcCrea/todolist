@@ -1,117 +1,173 @@
-/* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* App.css */
 
-/* Global Reset and Typography */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Import Google Font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Apply Montserrat font to relevant elements */
+body, .container, h1, .table th, .table td, .btn, .progress, .progress-circle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
 }
 
-body {
-  background-color: #f8f9fa; /* Light Gray */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-top: 10%;
+  animation: shadowColorChange 15s linear infinite alternate;
+}
+
+@keyframes shadowColorChange {
+  0% {
+    box-shadow: 0px 0px 50px rgb(214, 117, 244);
+  }
+  50% {
+    box-shadow: 0px 0px 50px rgb(117, 214, 244);
+  }
+  100% {
+    box-shadow: 0px 0px 50px rgb(244, 117, 214);
+  }
+}
+
+/* Add styles for delete and edit icons */
+.icons {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-
-
-.App {
-  text-align: center;
-}
-
-/* Heading Styles */
-h1 {
-  color: #343a40; /* Dark Gray */
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
-}
-
-
-/* To-Do Wrapper Styles */
-.TodoWrapper {
-  background: #fff3cd; /* Yellow */;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-}
-.TodoWrapper {
-  
-
-
-  
-   /* Soft Box Shadow */
-}
-
-/* To-Do Form Styles */
-.TodoForm {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.todo-input {
-  outline: none;
-  background: #fff8e1;
-  border: 1px solid #ffeeba;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  color: #6c757d; /* Gray */
-  
-}
-
-
-.todo-input::placeholder {
-  color: #adb5bd; /* Gray Placeholder */
-}
-
-.todo-btn {
-  background: #ffc107;
-  color: #343a40;
+.icons button {
+  background-color: transparent;
   border: none;
-  padding: 0.55rem 1rem;
-  transition: background-color 0.3s ease;
-  border-radius: 2px;
   cursor: pointer;
+  margin-left: 5px; /* Adjust the margin as needed */
 }
 
-.todo-btn:hover {
-  background-color: #ffca28; /* Lighter Yellow on Hover */
+.icons button:focus {
+  outline: none;
 }
 
-/* To-Do Item Styles */
-.Todo {
+.icons button:hover {
+  color: red; /* Change color on hover */
+}
+
+/* Adjust the padding and margin for subject name */
+.subject-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background:  #fff8e1;;
-  color: #6c757d;
-  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  padding: 5px; /* Adjust padding as needed */
+}
+
+.subject-wrapper span {
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+h1 {
+  color: #333;
+  text-align: center; /* Center align the heading */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 8px; /* Reduce padding */
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.btn {
+  padding: 8px 12px; /* Adjust padding */
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #20931cd7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #278cf8;
+}
+
+.btn-danger {
+  background-color: #c50014;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #bd2130;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  color: #c50014; /* Change color on hover */
+}
+
+/* Adjust the progress bar CSS */
+.progress {
+  width: 100%;
+  height: 20px;
+  background-color: #dddddd;
   border-radius: 5px;
-  margin-bottom: 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-
-.fa-trash {
-  margin-left: 0.75rem;
+.progress-bar {
+  height: 100%;
+  background-color: #ffe100;
+  color: #fff;
+  text-align: center;
+  transition: width 0.5s ease;
 }
 
-.incompleted {
-  color: #991c1c;
-  cursor: pointer;
+.progress-circle {
+  width: var(--percentage); /* Use percentage as width */
+  height: 100%;
+  background-color: var(--progress-color); /* Use dynamically set progress color */
+  border-radius: 5px; /* Adjust the border radius as needed */
+  color: #ffffff;
+  text-align: center;
+  transition: width 0.5s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }
 
-.completed {
-  color: #652eee;
-  text-decoration: line-through;
-  cursor: pointer;
+.progress-circle span {
+  line-height: 20px;
 }
 
-.edit-icon,
-.delete-icon {
-  cursor: pointer;
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px; /* Reduce padding */
+  }
 }
