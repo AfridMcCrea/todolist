@@ -162,9 +162,9 @@ h1 {
 }
 
 /* Responsive CSS */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 30px) {
   .container {
-    width: 90%; /* Adjust width for responsiveness */
+    width: 0%; /* Adjust width for responsiveness */
     margin: 20% auto; /* Center the container vertically */
     padding: 10px; /* Adjust padding for better spacing */
   }
