@@ -17,6 +17,7 @@ body, .container, h1, .table th, .table td, .btn, .progress, .progress-circle {
   border-radius: 10px;
   margin-top: 10%;
   animation: shadowColorChange 15s linear infinite alternate;
+  top: 10%;
 }
 
 @keyframes shadowColorChange {
