@@ -165,8 +165,8 @@ h1 {
 @media screen and (max-width: 430px) {
   .container {
     width: 90%; /* Adjust width for responsiveness */
-    margin: 15% auto; /* Center the container vertically */
-    padding: 5px; /* Adjust padding for better spacing */
+    margin: 20% auto; /* Center the container vertically */
+    padding: 10px; /* Adjust padding for better spacing */
   }
 
   .table th,
@@ -191,8 +191,8 @@ h1 {
 @media screen and (min-width: 431px) and (max-width: 932px) {
   .container {
     width: 80%; /* Adjust width for responsiveness */
-    margin: 15% auto; /* Center the container vertically */
-    padding: 10px; /* Adjust padding for better spacing */
+    margin: 20% auto; /* Center the container vertically */
+    padding: 15px; /* Adjust padding for better spacing */
   }
 
   .table th,
