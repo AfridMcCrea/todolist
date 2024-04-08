@@ -164,8 +164,8 @@ h1 {
 /* Responsive CSS */
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 90%;
-    margin-top: 20%; /* Adjust margin for better placement */
+    width: 80%; /* Adjust width for responsiveness */
+    margin: 20% 10%; /* Keep left and right margins at 10%, adjust top and bottom margins as needed */
     padding: 10px; /* Increase padding for better spacing */
   }
   
