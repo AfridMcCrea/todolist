@@ -165,10 +165,25 @@ h1 {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 90%;
+    margin-top: 20%; /* Adjust margin for better placement */
+    padding: 10px; /* Increase padding for better spacing */
   }
   
   .table th,
   .table td {
-    padding: 8px; /* Reduce padding */
+    padding: 5px; /* Reduce padding further for smaller screens */
+  }
+
+  .progress {
+    height: 15px; /* Decrease height of progress bar for smaller screens */
+  }
+
+  .progress-circle {
+    height: 15px; /* Decrease height of progress circle for smaller screens */
+    box-shadow: none; /* Remove box shadow for smaller screens */
+  }
+
+  .progress-circle span {
+    display: none; /* Hide percentage text for smaller screens */
   }
 }
