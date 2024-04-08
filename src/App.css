@@ -162,16 +162,42 @@ h1 {
 }
 
 /* Responsive CSS */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 430px) {
   .container {
-    width: 80%; /* Adjust width for responsiveness */
-    margin: 20% 10%; /* Keep left and right margins at 10%, adjust top and bottom margins as needed */
-    padding: 10px; /* Increase padding for better spacing */
+    width: 90%; /* Adjust width for responsiveness */
+    margin: 15% auto; /* Center the container vertically */
+    padding: 5px; /* Adjust padding for better spacing */
   }
-  
+
   .table th,
   .table td {
     padding: 5px; /* Reduce padding further for smaller screens */
+  }
+
+  .progress {
+    height: 10px; /* Decrease height of progress bar for smaller screens */
+  }
+
+  .progress-circle {
+    height: 10px; /* Decrease height of progress circle for smaller screens */
+    box-shadow: none; /* Remove box shadow for smaller screens */
+  }
+
+  .progress-circle span {
+    display: none; /* Hide percentage text for smaller screens */
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 932px) {
+  .container {
+    width: 80%; /* Adjust width for responsiveness */
+    margin: 15% auto; /* Center the container vertically */
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  .table th,
+  .table td {
+    padding: 8px; /* Reduce padding further for smaller screens */
   }
 
   .progress {
